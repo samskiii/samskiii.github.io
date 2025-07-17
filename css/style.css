@@ -1,0 +1,51 @@
+body {
+    scroll-behavior: smooth;
+}
+
+.prose-invert h1, .prose-invert h2, .prose-invert h3 {
+    color: #f4f4f5; /* zinc-100 */
+}
+
+.prose-invert a {
+    color: #4ade80; /* green-400 */
+}
+
+.prose-invert a:hover {
+    color: #86efac; /* green-300 */
+}
+
+.prose-invert blockquote {
+    border-left-color: #4ade80; /* green-400 */
+    color: #d4d4d8; /* zinc-300 */
+}
+
+.prose-invert strong {
+    color: #fff;
+}
+
+.prose-invert table {
+    width: 100%;
+}
+.prose-invert thead {
+    border-bottom-color: #52525b; /* zinc-600 */
+}
+.prose-invert tbody tr {
+    border-bottom-color: #3f3f46; /* zinc-700 */
+}
+.prose-invert td, .prose-invert th {
+    padding: 0.75rem 1rem;
+    vertical-align: top;
+}
+
+.lang-active {
+    background-color: #16a34a; /* green-600 */
+    color: white;
+}
+
+.lang-inactive {
+    background-color: #3f3f46; /* zinc-700 */
+    color: #a1a1aa; /* zinc-400 */
+}
+.lang-inactive:hover {
+    background-color: #52525b; /* zinc-600 */
+}
