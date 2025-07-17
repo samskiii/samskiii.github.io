@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate-key="contact_title">Contacto - Bacho</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-zinc-900 text-white font-['Inter'] antialiased">
+
+    <div id="app-container" class="opacity-0 transition-opacity duration-500">
+        <!-- Header -->
+        <header class="fixed top-0 left-0 w-full bg-zinc-900/80 backdrop-blur-lg z-50">
+            <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+                <a href="index.html" class="text-2xl font-bold tracking-wider">BACHO</a>
+                <nav class="hidden md:flex items-center space-x-6 text-sm">
+                    <a href="index.html" class="hover:text-green-400 transition-colors duration-300" data-translate-key="nav_home">Inicio</a>
+                    <a href="catalog.html" class="hover:text-green-400 transition-colors duration-300" data-translate-key="nav_catalog">Catálogo</a>
+                    <a href="about.html" class="hover:text-green-400 transition-colors duration-300" data-translate-key="nav_about">Sobre Nosotros</a>
+                    <a href="faq.html" class="hover:text-green-400 transition-colors duration-300" data-translate-key="nav_faq">FAQ</a>
+                    <a href="contact.html" class="hover:text-green-400 transition-colors duration-300" data-translate-key="nav_contact">Contacto</a>
+                </nav>
+                <div class="flex items-center space-x-4">
+                    <div id="lang-switcher" class="flex text-sm font-medium">
+                        <button id="lang-es" class="px-2 py-1 rounded-l-md transition-colors duration-300">ES</button>
+                        <button id="lang-en" class="px-2 py-1 rounded-r-md transition-colors duration-300">EN</button>
+                    </div>
+                     <button id="mobile-menu-btn" class="md:hidden">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="fixed top-0 left-0 w-full h-full bg-zinc-900 z-40 transform -translate-y-full transition-transform duration-300 ease-in-out md:hidden">
+            <div class="flex flex-col items-center justify-center h-full pt-20 space-y-8 text-xl">
+                 <a href="index.html" class="hover:text-green-400 transition-colors duration-300" data-translate-key="nav_home">Inicio</a>
+                <a href="catalog.html" class="hover:text-green-400 transition-colors duration-300" data-translate-key="nav_catalog">Catálogo</a>
+                <a href="about.html" class="hover:text-green-400 transition-colors duration-300" data-translate-key="nav_about">Sobre Nosotros</a>
+                <a href="faq.html" class="hover:text-green-400 transition-colors duration-300" data-translate-key="nav_faq">FAQ</a>
+                <a href="contact.html" class="hover:text-green-400 transition-colors duration-300" data-translate-key="nav_contact">Contacto</a>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <main class="pt-24 md:pt-32 pb-20">
+            <div class="container mx-auto px-6">
+                 <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-12">
+                    <div id="markdown-content" class="prose prose-invert prose-lg">
+                        <!-- Markdown content will be injected here -->
+                    </div>
+                    <div>
+                        <form id="contact-form" class="space-y-4" action="https://formsubmit.co/simonsaulenko@gmail.com" method="POST">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-zinc-300 mb-1" data-translate-key="form_name">Nombre</label>
+                                <input type="text" id="name" name="name" required class="w-full bg-zinc-800 border border-zinc-700 rounded-md py-2 px-3 focus:ring-green-500 focus:border-green-500">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-zinc-300 mb-1" data-translate-key="form_email">Correo Electrónico</label>
+                                <input type="email" id="email" name="email" required class="w-full bg-zinc-800 border border-zinc-700 rounded-md py-2 px-3 focus:ring-green-500 focus:border-green-500">
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-zinc-300 mb-1" data-translate-key="form_message">Mensaje</label>
+                                <textarea id="message" name="message" rows="4" required class="w-full bg-zinc-800 border border-zinc-700 rounded-md py-2 px-3 focus:ring-green-500 focus:border-green-500"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-green-600 hover:bg-green-500 transition-colors duration-300 text-white font-semibold py-3 px-8 rounded-lg" data-translate-key="form_submit">Enviar Mensaje</button>
+                            <p id="form-feedback" class="text-sm text-center mt-4"></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <!-- Footer -->
+        <footer class="bg-black py-12">
+            <div class="container mx-auto px-6 text-center text-zinc-400 text-sm">
+                <p>&copy; 2025 Bacho. <span data-translate-key="footer_rights">Todos los derechos reservados.</span></p>
+                <div class="flex justify-center space-x-6 mt-4">
+                    <a href="about.html" class="hover:text-white" data-translate-key="nav_about">Sobre Nosotros</a>
+                    <a href="catalog.html" class="hover:text-white" data-translate-key="nav_catalog">Catálogo</a>
+                    <a href="contact.html" class="hover:text-white" data-translate-key="nav_contact">Contacto</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
